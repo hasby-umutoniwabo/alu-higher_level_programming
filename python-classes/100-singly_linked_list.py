@@ -4,6 +4,7 @@ Module to define a Node class for a singly linked list
 and a SinglyLinkedList class to manage the list.
 """
 
+
 class Node:
     """Class to define a node in a singly linked list."""
 
