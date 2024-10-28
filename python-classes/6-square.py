@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module to define a Square class that represents a square with a given size 
+Module to define a Square class that represents a square with a given size
 and position.
 """
 
