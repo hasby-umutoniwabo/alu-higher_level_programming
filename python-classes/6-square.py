@@ -141,4 +141,5 @@ if __name__ == "__main__":
 
     # Correct output - case: mysquare = Square(0, (10, 3))
     mysquare = Square(0, (10, 3))
-    mysquare.my_print()  # Should print an empty line 
+    mysquare.my_print()  # Should print an empty line
+
