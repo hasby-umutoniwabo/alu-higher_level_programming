@@ -78,50 +78,55 @@ class Square:
 
 # Example usage:
 if __name__ == "__main__":
-    try:
-        my_square = Square(3, (1, 1))
-        my_square.my_print()
-        print("Size:", my_square.size)
-        print("Area:", my_square.area())
-        print("Position:", my_square.position)
-
-        # Testing the error cases
-        Square(3, "Position")  # Should raise TypeError
-    except Exception as e:
-        print(e)
-
-    try:
-        Square(3, (1, ))  # Should raise TypeError
-    except Exception as e:
-        print(e)
-
-    try:
-        Square(3, (1, -3))  # Should raise TypeError
-    except Exception as e:
-        print(e)
-
-    try:
-        Square(3, (1, "3"))  # Should raise TypeError
-    except Exception as e:
-        print(e)
-
-    mysquare = Square(3)
-    mysquare.my_print()
+    # Test case: Square(3, (1, 1))
+    my_square = Square(3, (1, 1))
+    my_square.my_print()
     
-    mysquare = Square(3, (0, 0))
-    mysquare.my_print()
-    
-    mysquare = Square(3, (1, 0))
-    mysquare.my_print()
-    
-    mysquare = Square(3, (0, 1))
-    mysquare.my_print()
-    
+    # Test case: Square(3, (1, 1)) with size and area
     mysquare = Square(3, (1, 1))
-    mysquare.my_print()
-    
+    print("Size:", mysquare.size)         # Output: Size: 3
+    print("Area:", mysquare.area())       # Output: Area: 9
+    print("Position:", mysquare.position)  # Output: Position: (1, 1)
+
+    # Error cases
+    try:
+        my_square = Square(3, "Position")  # Should raise TypeError
+    except Exception as e:
+        print(e)
+
+    try:
+        my_square = Square(3, (1, ))  # Should raise TypeError
+    except Exception as e:
+        print(e)
+
+    try:
+        my_square = Square(3, (1, -3))  # Should raise TypeError
+    except Exception as e:
+        print(e)
+
+    try:
+        my_square = Square(3, (1, "3"))  # Should raise TypeError
+    except Exception as e:
+        print(e)
+
+    # Valid test cases for my_print()
+    mysquare = Square(3)
+    mysquare.my_print()  # Should print a 3x3 square
+
+    mysquare = Square(3, (0, 0))
+    mysquare.my_print()  # Should print a 3x3 square aligned to the left
+
+    mysquare = Square(3, (1, 0))
+    mysquare.my_print()  # Should print a 3x3 square with 1 space offset
+
+    mysquare = Square(3, (0, 1))
+    mysquare.my_print()  # Should print a 3x3 square with 1 empty line before
+
+    mysquare = Square(3, (1, 1))
+    mysquare.my_print()  # Should print a 3x3 square with 1 space offset and 1 empty line before
+
     mysquare = Square(5, (3, 2))
-    mysquare.my_print()
-    
+    mysquare.my_print()  # Should print a 5x5 square with offset
+
     mysquare = Square(0, (10, 3))
-    mysquare.my_print() 
+    mysquare.my_print()  # Should print an empty line 
