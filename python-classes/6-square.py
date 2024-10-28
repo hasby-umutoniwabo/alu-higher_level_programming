@@ -4,6 +4,7 @@ Module to define a Square class that represents a square with a given size
 and position.
 """
 
+
 class Square:
     """Class to define a square with a specific size and position."""
 
