@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module to define a Square class that represents a square with a given size and position.
+"""
 
 class Square:
     """Class to define a square with a specific size and position."""
@@ -76,57 +79,66 @@ class Square:
             print(" " * self.position[0] + "#" * self.size)
 
 
-# Example usage:
+# Example usage and tests
 if __name__ == "__main__":
-    # Test case: Square(3, (1, 1))
+    # Correct output - case: my_square = Square(3, (1, 1))
     my_square = Square(3, (1, 1))
     my_square.my_print()
-    
-    # Test case: Square(3, (1, 1)) with size and area
-    mysquare = Square(3, (1, 1))
-    print("Size:", mysquare.size)         # Output: Size: 3
-    print("Area:", mysquare.area())       # Output: Area: 9
-    print("Position:", mysquare.position)  # Output: Position: (1, 1)
 
-    # Error cases
+    # Correct output - case: mysquare = Square(3, (1, 1))
+    mysquare = Square(3, (1, 1))
+    print("Size:", mysquare.size)          # Output: Size: 3
+    print("Area:", mysquare.area())        # Output: Area: 9
+    print("Position:", mysquare.position)   # Output: Position: (1, 1)
+
+    # Correct output - case: my_square = Square(3, "Position")
     try:
         my_square = Square(3, "Position")  # Should raise TypeError
     except Exception as e:
         print(e)
 
+    # Correct output - case: my_square = Square(3, (1,))
     try:
         my_square = Square(3, (1, ))  # Should raise TypeError
     except Exception as e:
         print(e)
 
+    # Correct output - case: my_square = Square(3, (1, -3))
     try:
         my_square = Square(3, (1, -3))  # Should raise TypeError
     except Exception as e:
         print(e)
 
+    # Correct output - case: my_square = Square(3, (1, "3"))
     try:
         my_square = Square(3, (1, "3"))  # Should raise TypeError
     except Exception as e:
         print(e)
 
-    # Valid test cases for my_print()
+    # Correct output - case: mysquare = Square(3)
     mysquare = Square(3)
     mysquare.my_print()  # Should print a 3x3 square
 
+    # Correct output - case: mysquare = Square(3, (0, 0))
     mysquare = Square(3, (0, 0))
     mysquare.my_print()  # Should print a 3x3 square aligned to the left
 
+    # Correct output - case: mysquare = Square(3, (1, 0))
     mysquare = Square(3, (1, 0))
     mysquare.my_print()  # Should print a 3x3 square with 1 space offset
 
+    # Correct output - case: mysquare = Square(3, (0, 1))
     mysquare = Square(3, (0, 1))
     mysquare.my_print()  # Should print a 3x3 square with 1 empty line before
 
+    # Correct output - case: mysquare = Square(3, (1, 1))
     mysquare = Square(3, (1, 1))
-    mysquare.my_print()  # Should print a 3x3 square with 1 space offset and 1 empty line before
+    mysquare.my_print()  # Should print a 3x3 square with offset
 
+    # Correct output - case: mysquare = Square(5, (3, 2))
     mysquare = Square(5, (3, 2))
     mysquare.my_print()  # Should print a 5x5 square with offset
 
+    # Correct output - case: mysquare = Square(0, (10, 3))
     mysquare = Square(0, (10, 3))
     mysquare.my_print()  # Should print an empty line 
