@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-N-Queens Problem Solver
+N Queens Problem Solver
 This script finds all possible solutions for placing N non-attacking queens on an NxN chessboard.
 """
 
