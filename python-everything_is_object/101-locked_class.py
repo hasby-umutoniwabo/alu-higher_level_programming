@@ -3,6 +3,7 @@
 This module defines a LockedClass with restricted attribute setting.
 """
 
+
 class LockedClass:
     """
     A class that only allows the 'first_name' attribute to be set dynamically.
