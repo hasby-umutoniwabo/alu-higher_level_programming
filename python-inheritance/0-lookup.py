@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-
+"""
+Module for lookup function.
+Contains a single function to return available attributes and methods of an object.
+"""
 
 def lookup(obj):
-    """Returns a list of available attributes and methods of an object."""
-    return [attr for attr in dir(obj) 
-            if callable(getattr(obj, attr)) or not callable(getattr(obj, attr))]
+    """Returns the list of available attributes and methods of an object."""
+    return dir(obj)
