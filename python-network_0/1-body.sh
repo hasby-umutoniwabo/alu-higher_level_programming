@@ -1,6 +1,4 @@
 #!/bin/bash
-# sends GET request to the URL provided as an arg displays body if 200
-response=$(curl -s -w "%{http_code}" -o response.txt "$1")
-if [ "$response" -eq 200 ]; then
-    cat response.txt
-fi
+# This script sends a GET request to the URL and displays the body if the status code is 200.
+response=$(curl -s -w "%{http_code}" -o temp_response.txt "$1")
+[ "$response" -eq 200 ] && cat temp_response.txt
